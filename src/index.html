@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat album</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Return Item -->
+    <template id="return-item">
+      <div
+        class="bg-gray-600 relative rounded cursor-pointer"
+        style="padding-top: 100%"
+      >
+        <div
+          class="
+            absolute
+            top-0
+            left-0
+            right-0
+            bottom-0
+            w-full
+            h-full
+            flex flex-col
+            justify-center
+            items-center
+          "
+        >
+          <img data-flag="image" class="w-16 h-16" src="./assets/return.svg" />
+          <div data-flag="name" class="font-sans text-white">돌아가기</div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Item -->
+    <template id="item">
+      <div
+        class="bg-gray-600 relative rounded cursor-pointer"
+        style="padding-top: 100%"
+      >
+        <div
+          class="
+            absolute
+            top-0
+            left-0
+            right-0
+            bottom-0
+            w-full
+            h-full
+            flex flex-col
+            justify-center
+            items-center
+          "
+        >
+          <img data-flag="image" class="w-16 h-16" src="" />
+          <div data-flag="name" class="font-sans text-white"></div>
+        </div>
+      </div>
+    </template>
+
+    <!-- List -->
+    <template id="list">
+      <div
+        data-flag="items-wrapper"
+        class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-6"
+      ></div>
+    </template>
+
+    <!-- Breadcrumbs -->
+    <template id="breadcrumbs">
+      <div class="mt-4 text-white"></div>
+    </template>
+
+    <!-- App -->
+    <template id="app">
+      <div class="px-4 pt-6 pb-4 bg-gray-700 min-h-screen">
+        <div class="font-sans font-bold text-lg text-white">Cat album</div>
+        <div class="mt-4 border-t border-gray-600"></div>
+        <div data-flag="breadcrumbs-wrapper"></div>
+        <div data-flag="list-wrapper"></div>
+      </div>
+    </template>
+
+    <div id="root"></div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
